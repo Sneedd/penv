@@ -13,8 +13,8 @@ applications this framework can be advantageous.
 
 Screenshot
 ==========
-Here is a screenshot from this version example code.
-
+Here is a screenshot from this version example code:
+![Screenshot Version of Nov 2008](https://raw.githubusercontent.com/Sneedd/penv/master/docs/penv-test-screenshot.gif)
 
 Credits
 =======
