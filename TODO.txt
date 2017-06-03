@@ -1,0 +1,141 @@
+
+
+TODO: (1 = Höchste Priorität, 9 = Niedrigste Priorität)
+      (+ = Erledigt, - = Noch zu tun)
+
+--------------- Version 0.7 -----------------------------------------
+
+Aktuell
+
+--------------- Version 0.8 -----------------------------------------
+
+- (1) ProjectTreeAction überarbeiten und keine StandardImplementierung rein machen.
+  Statt dessen dieses Element als vereinfachung für das hinzufügen, löschen,
+  verschieben und kopieren und updaten des project tree ctrls verwenden.
+  Auch soll die nicht vom ProjectTreeAction aus Move/Copy Project/ProjectItem auf
+  gerufen werden können, sondern nur diese Aktionen in dem TreeCtrl ausgeführt
+  werden. Damit programmiertechnische änderungen an das ProjectTreeCtrl weitergeleitet
+  werdenen können.
+- (1) Speicherung implementieren für "Aller Workspaces", "Einzelner Workspaces",
+  "Aller Projecte", "Einzelner Projecte"
+- (1) XRC Funktionalität in Window implementieren. Hier können die vorhanden Parser
+  verwendet werden um die Datei einzulesen und das control zu erzeugen, dabei
+  bekommt man vielleicht auch aus der Aufbau Hierachy die Namen der Objecte.
+  Die Namen werden für das Connecten von Events benötigt.
+  auf anfrage aus XML Dateien auslesen und erstellen.
+- (1) ShortCut implementieren. Dabei ShortCuts wie (STRG+G dann STRG+V) erlauben.
+- (2) Contextmenüs ebenfalls über Eventsystem erstellen. Auch vordefinierte Contextmenüs
+- (1) Einfügen der Events und Command IDs in der Package Definition. Bzw.
+  zusätzlich in der XML Datei, eventuell mit Hilfe. Dazu müssen Commands
+  und Windows zugehörig zu einem Paket gemacht werden.
+- (1) ResourceManager implementieren für penv eigene Resource. Eventuell mit BuildIn
+  Resourcen.
+- (1) Überall wo möglich von wxObject ableiten!
+- (2) Neues Verzeichniss mit Klassen die BuildIn Event und Command implementierungen
+  enthalten erstellen.
+- (2) BuildIn Actions wie in ProjectTreeCtrl sollen über ein eigene BuildInCommandList
+  und BuildInCommand Klasse verwaltet werden.
+- (2) Um Dateien oder sonstiges zu erstellen, sollte ein Dialog definiert werden, dem
+  über eine XML Datei neue Elemente hinzugefügt werden können. Beispiel (siehe
+  CreateDialog XML)
+- (3) Umbennen der "Command" Sachen in "Event", da Event auch ein
+  Überbegriff für ein Befehl ist und nicht andersrum. (???)
+- (4) Wird ProjectTreeCtrl nicht mehr benötigt, dann soll es nicht den ganzen Speicher
+  verwenden. Sonder ausgeschaltet werden.
+- (4) Bessere Trennung in ProjectTreeCtrl und Project Management. Zb.: ProjectTreeAction
+  würfelt viel zusammen, was nicht sein sollte.
+- (5) Layout als WindowPerspective sichern, ähnlich dem Perspectiv Konzept im
+  Eclipse Framework.
+- (2) Entfernen der enabled und visible Attribute in <menuitem> und <toolitem>.
+- (2) Hinzufügen der window class id für projecte, workspaces, projectitems.
+- (3) Layout und/oder Perspective xml Dateien für alle offenen Workspaces.
+  Ebenso in dem Configurations Verzeichniss, da dies global abgespeichert
+  werden soll.
+- (1) WindowList::GetOpenWindows() soll einen zusätzlichen Parameter bekommen.
+  Der Paramerter ist die Class ID eines Fensters. Der Default wert wxEmptyString
+  soll alle Fenster zurückliefern, ist der Parameter mit einem string besetzt
+  werden nur die Offenen Fenster geliefert, die auch die übergeben ClassID haben.
+
+
+
+--------------- Version 0.9 -----------------------------------------
+
+- (2) Implemtieren der fehlender Funktionalität in den Command Dialogen.
+- (2) Dynamisches Paketsystem implementieren.
+- (4) MenuItem Check und MenuItem Radio implementieren.
+- (3) Penv als DLL implementieren.
+- (5) Vorbereiten des Frameworks zum ausliefern in DEVEL versionen, etc.
+  DEVEL Paket enthält für Windows, DLLs für wxWidgets
+- (3) Besserer Test der verfügbaren Optionen in wxWidgets. zB: Also test ob
+  wxUSE_AUI, wxUSE_XRC gesetzt ist. Eventuell auch dort testen wo es
+  verwendet wird und ein Workaround erstellen, wenn möglich, falls die
+  wxUSE_ defines nicht gesetzt sind.
+- (7) Lazy Invokation von nicht oft genutzten Objecten. Dazu werden MACROS
+  benötigt, die die LazyInvokation von den jeweiligen Objecten erlauben.
+  Siehe Beispiel unten zu penv::ObjectInvoker.
+- (8) wxScript with LUA should be available to create skripts for the
+  Application and for control the penv Framework. The Skript can be used
+  for code generation in the penv framework or debugging tasks (resolve
+  spezial classes for better viewing).
+
+--------------- Version 1.0 -----------------------------------------
+
+- (3) Thread Funktionalität erweitern. zB.: Service Thread, Taskmaster Thread <=> Worker Thread
+  Der Service Thread ist für verschiedene Services die in penv BuildIn sind. Beispielsweise
+  Drucker hilfs funktionalität.
+  Der Taskmaster Thread bekommt Aufträge für die Bearbeitung, wobei dieser dies an ein
+  freien Worker Thread weiterleitet. Dieser bearbeitet den auftrag über seine spezielle ID.
+  Hier muss eine spezielle Benachrichtigung eingebaut werden, die über das wxWidgets
+  Eventsystem zB an die Oberfläche zurückgegeben werden können.
+  Gesamtes Penv Threadsicher machen wo es geht.
+
+- (8) Array<> eventuell doch durch wxArray ersetzten?? Falls möglich
+
+--------------- Version X.0 -----------------------------------------
+
+- (9) Dokumentenverwaltung bzw. Project Management über Server ??? (Für SVN, CVS, usw...)
+- (8) Eventuell auch spezielle Submenüs erstellbar beispielsweise für das ein und
+  Ausschalten von ToolBars. Oder Recent Files ...
+- (9) Dateiänderungen die ausserhalb von penv Stattfinden ermittlen. Über Dateigröße und
+  Datum.
+- (5) wxScintialla Window Document implementierung.
+- (5) wxOGL Window Document implementierung und gleichzeitig ToolBox WindowPane
+  implementierung um Shapes in das Window per DragAndDrop ziehen zu können.
+- (5) wxScript einbauen.
+- (5) wxGLCanvas implementieren (vereinfachtes ptgl).
+
+
+
+CreateDialog XML: (Name???)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<createdialog>
+  <item name="Directory" icon="directory.png" extension=""></item>
+  <category name="Source">
+    <item name="Header" icon="headericon.png" extension=".h">headertemplate.xml</item>
+    <item name="Source" icon="sourceicon.png" extension=".cpp">sourcetemplate.xml</item>
+  </category>
+</createdialog>
+
+
+penv::ObjectInvoker (Name???)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+class ObjectInvoker
+{
+    // Erzeugt ein Object vom jeweiligen Typ
+    // Muss für jede Klasse abgeleitet werden auch
+    // weiter unten in der Vererbungshierachy.
+    virtual Object* Invoke() const = 0;
+    // Besonderer Identifier, der es erlaubt das jeweilige
+    // Object über diesen Namen zu erstellen.
+    virtual wxString GetClassName() const = 0;
+};
+// Zugehöriges MACRO
+#define PENV_DECLARE_OBJECTINVOKER(classname, identifier, invokername) \
+ class invokername : public ObjectInvoker { \
+    Object* Invoke() const { return (new classname()); }   \
+    wxString GetClassName() const { return (identifier); } \
+ }
+
+
+
+

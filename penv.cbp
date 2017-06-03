@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="penv" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\penv_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin\" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-D_X86_" />
+					<Add option="-DWIN32" />
+					<Add option="-D_WIN32" />
+					<Add option="-DWINVER=0x0400" />
+					<Add option="-D__GNUWIN32__" />
+					<Add option="-D__WIN32__" />
+					<Add option="-DSTRICT" />
+					<Add option="-D__WXMSW__" />
+					<Add option="-D__WINDOWS__" />
+					<Add option="-D__DEBUG__" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="C:\Dev\wxWidgets2.8\include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)\include" />
+					<Add directory="$(#wx)\lib\gcc_lib\mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="wxmsw28ud_scintilla" />
+					<Add library="wxmsw28ud_ogl" />
+					<Add library="wxmsw28ud_gl" />
+					<Add library="wxmsw28ud" />
+					<Add library="wxmsw28ud_xrc" />
+					<Add library="wxexpatd" />
+					<Add library="wxjpegd" />
+					<Add library="wxtiffd" />
+					<Add library="wxpngd" />
+					<Add library="wxzlibd" />
+					<Add library="winspool" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="comctl32" />
+					<Add library="ctl3d32" />
+					<Add library="odbc32" />
+					<Add library="advapi32" />
+					<Add library="wsock32" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add directory="C:\Dev\wxWidgets2.8\lib\gcc_lib" />
+					<Add directory="C:\Dev\wxWidgets2.8\additions\lib\gcc_lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\penv_release" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin\" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-D_X86_" />
+					<Add option="-DWIN32" />
+					<Add option="-D_WIN32" />
+					<Add option="-DWINVER=0x0400" />
+					<Add option="-D__GNUWIN32__" />
+					<Add option="-D__WIN32__" />
+					<Add option="-DSTRICT" />
+					<Add option="-D__WXMSW__" />
+					<Add option="-D__WINDOWS__" />
+					<Add directory="C:\Dev\wxWidgets2.8\include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)\include" />
+					<Add directory="$(#wx)\lib\gcc_lib\mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="wxmsw28u_scintilla" />
+					<Add library="wxmsw28u_ogl" />
+					<Add library="wxmsw28u_gl" />
+					<Add library="wxmsw28u" />
+					<Add library="wxmsw28u_xrc" />
+					<Add library="wxexpat" />
+					<Add library="wxjpeg" />
+					<Add library="wxtiff" />
+					<Add library="wxpng" />
+					<Add library="wxzlib" />
+					<Add library="winspool" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="comctl32" />
+					<Add library="ctl3d32" />
+					<Add library="odbc32" />
+					<Add library="advapi32" />
+					<Add library="wsock32" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add directory="C:\Dev\wxWidgets2.8\lib\gcc_lib" />
+					<Add directory="C:\Dev\wxWidgets2.8\additions\lib\gcc_lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug-DLL">
+				<Option output="bindll\penv_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bindll\" />
+				<Option object_output="obj\Debug-DLL" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-D_X86_" />
+					<Add option="-DWIN32" />
+					<Add option="-D_WIN32" />
+					<Add option="-DWINVER=0x0400" />
+					<Add option="-D__GNUWIN32__" />
+					<Add option="-D__WIN32__" />
+					<Add option="-DSTRICT" />
+					<Add option="-D__WXMSW__" />
+					<Add option="-D__WINDOWS__" />
+					<Add option="-D__DEBUG__" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="C:\Dev\wxWidgets2.8\include" />
+				</Compiler>
+				<Linker>
+					<Add library="wxmsw28ud_ogl" />
+					<Add library="wxmsw28ud_gl" />
+					<Add library="wxmsw28ud" />
+					<Add library="wxmsw28ud_xrc" />
+					<Add library="wxexpatd" />
+					<Add library="wxjpegd" />
+					<Add library="wxtiffd" />
+					<Add library="wxpngd" />
+					<Add library="wxzlibd" />
+					<Add library="winspool" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="comctl32" />
+					<Add library="ctl3d32" />
+					<Add library="odbc32" />
+					<Add library="advapi32" />
+					<Add library="wsock32" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add directory="C:\Dev\wxWidgets2.8\lib\gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release-DLL">
+				<Option output="bindll\penv_release" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bindll\" />
+				<Option object_output="obj\Release-DLL" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-D_X86_" />
+					<Add option="-DWIN32" />
+					<Add option="-D_WIN32" />
+					<Add option="-DWINVER=0x0400" />
+					<Add option="-D__GNUWIN32__" />
+					<Add option="-D__WIN32__" />
+					<Add option="-DSTRICT" />
+					<Add option="-D__WXMSW__" />
+					<Add option="-D__WINDOWS__" />
+					<Add directory="C:\Dev\wxWidgets2.8\include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="wxmsw28u_ogl" />
+					<Add library="wxmsw28u_gl" />
+					<Add library="wxmsw28u" />
+					<Add library="wxmsw28u_xrc" />
+					<Add library="wxexpat" />
+					<Add library="wxjpeg" />
+					<Add library="wxtiff" />
+					<Add library="wxpng" />
+					<Add library="wxzlib" />
+					<Add library="winspool" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="comctl32" />
+					<Add library="ctl3d32" />
+					<Add library="odbc32" />
+					<Add library="advapi32" />
+					<Add library="wsock32" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add directory="C:\Dev\wxWidgets2.8\lib\gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="C:\Programme\MinGW\include" />
+			<Add directory="C:\Programme\MinGW\lib\gcc_\mswu" />
+			<Add directory="C:\Programme\MinGW\contrib\include" />
+		</Compiler>
+		<Linker>
+			<Add directory="C:\Programme\MinGW\lib\gcc_" />
+		</Linker>
+		<Unit filename="TODO.txt" />
+		<Unit filename="src\application.cpp" />
+		<Unit filename="src\application.h" />
+		<Unit filename="src\applicationframe.cpp" />
+		<Unit filename="src\applicationframe.h" />
+		<Unit filename="src\command.cpp" />
+		<Unit filename="src\command.h" />
+		<Unit filename="src\commandcallback.cpp" />
+		<Unit filename="src\commandcallback.h" />
+		<Unit filename="src\commandevent.cpp" />
+		<Unit filename="src\commandevent.h" />
+		<Unit filename="src\commandlist.cpp" />
+		<Unit filename="src\commandlist.h" />
+		<Unit filename="src\commandobject.cpp" />
+		<Unit filename="src\commandobject.h" />
+		<Unit filename="src\container\objarray.h" />
+		<Unit filename="src\documentation.h" />
+		<Unit filename="src\environment.cpp" />
+		<Unit filename="src\environment.h" />
+		<Unit filename="src\expect.h" />
+		<Unit filename="src\globals.h" />
+		<Unit filename="src\menubar.cpp" />
+		<Unit filename="src\menubar.h" />
+		<Unit filename="src\menuitem.cpp" />
+		<Unit filename="src\menuitem.h" />
+		<Unit filename="src\menuitemtype.h" />
+		<Unit filename="src\package.cpp" />
+		<Unit filename="src\package.h" />
+		<Unit filename="src\packagedependency.cpp" />
+		<Unit filename="src\packagedependency.h" />
+		<Unit filename="src\packagelist.cpp" />
+		<Unit filename="src\packagelist.h" />
+		<Unit filename="src\path.cpp" />
+		<Unit filename="src\path.h" />
+		<Unit filename="src\penv.h" />
+		<Unit filename="src\penvhelper.cpp" />
+		<Unit filename="src\penvhelper.h" />
+		<Unit filename="src\penvitem.cpp" />
+		<Unit filename="src\penvitem.h" />
+		<Unit filename="src\penvitemtype.h" />
+		<Unit filename="src\project.cpp" />
+		<Unit filename="src\project.h" />
+		<Unit filename="src\projectitem.cpp" />
+		<Unit filename="src\projectitem.h" />
+		<Unit filename="src\projectitemdirectory.cpp" />
+		<Unit filename="src\projectitemdirectory.h" />
+		<Unit filename="src\projectitemfile.cpp" />
+		<Unit filename="src\projectitemfile.h" />
+		<Unit filename="src\projectitemlinkeditems.cpp" />
+		<Unit filename="src\projectitemlinkeditems.h" />
+		<Unit filename="src\projectitemlist.cpp" />
+		<Unit filename="src\projectitemlist.h" />
+		<Unit filename="src\projectitemsubproject.cpp" />
+		<Unit filename="src\projectitemsubproject.h" />
+		<Unit filename="src\projectitemtype.h" />
+		<Unit filename="src\projectlist.cpp" />
+		<Unit filename="src\projectlist.h" />
+		<Unit filename="src\property.cpp" />
+		<Unit filename="src\property.h" />
+		<Unit filename="src\propertylist.cpp" />
+		<Unit filename="src\propertylist.h" />
+		<Unit filename="src\propertytype.h" />
+		<Unit filename="src\resourcemanager.cpp" />
+		<Unit filename="src\resourcemanager.h" />
+		<Unit filename="src\shortcut.cpp" />
+		<Unit filename="src\shortcut.h" />
+		<Unit filename="src\shortcutlist.cpp" />
+		<Unit filename="src\shortcutlist.h" />
+		<Unit filename="src\statusbar.cpp" />
+		<Unit filename="src\statusbar.h" />
+		<Unit filename="src\toolbar.cpp" />
+		<Unit filename="src\toolbar.h" />
+		<Unit filename="src\toolbaritem.cpp" />
+		<Unit filename="src\toolbaritem.h" />
+		<Unit filename="src\toolbarlist.cpp" />
+		<Unit filename="src\toolbarlist.h" />
+		<Unit filename="src\ui\commanddialog.cpp" />
+		<Unit filename="src\ui\commanddialog.h" />
+		<Unit filename="src\ui\commandmenutreedata.cpp" />
+		<Unit filename="src\ui\commandmenutreedata.h" />
+		<Unit filename="src\ui\commandmenutreeviewdroptarget.cpp" />
+		<Unit filename="src\ui\commandmenutreeviewdroptarget.h" />
+		<Unit filename="src\ui\commandmenuwindow.cpp" />
+		<Unit filename="src\ui\commandmenuwindow.h" />
+		<Unit filename="src\ui\commandshortcutwindow.cpp" />
+		<Unit filename="src\ui\commandshortcutwindow.h" />
+		<Unit filename="src\ui\commandtoolbartreedata.cpp" />
+		<Unit filename="src\ui\commandtoolbartreedata.h" />
+		<Unit filename="src\ui\commandtoolbartreeviewdroptarget.cpp" />
+		<Unit filename="src\ui\commandtoolbartreeviewdroptarget.h" />
+		<Unit filename="src\ui\commandtoolbarwindow.cpp" />
+		<Unit filename="src\ui\commandtoolbarwindow.h" />
+		<Unit filename="src\ui\debugpagecommands.cpp" />
+		<Unit filename="src\ui\debugpagecommands.h" />
+		<Unit filename="src\ui\debugpagewindows.cpp" />
+		<Unit filename="src\ui\debugpagewindows.h" />
+		<Unit filename="src\ui\debugwindow.cpp" />
+		<Unit filename="src\ui\debugwindow.h" />
+		<Unit filename="src\ui\failureinfodialog.cpp" />
+		<Unit filename="src\ui\failureinfodialog.h" />
+		<Unit filename="src\ui\messageboxadvanced.cpp" />
+		<Unit filename="src\ui\messageboxadvanced.h" />
+		<Unit filename="src\ui\messagewindow.cpp" />
+		<Unit filename="src\ui\messagewindow.h" />
+		<Unit filename="src\ui\messagewindowlogchain.cpp" />
+		<Unit filename="src\ui\messagewindowlogchain.h" />
+		<Unit filename="src\ui\projecttreeaction.cpp" />
+		<Unit filename="src\ui\projecttreeaction.h" />
+		<Unit filename="src\ui\projecttreeactiontype.h" />
+		<Unit filename="src\ui\projecttreectrl.cpp" />
+		<Unit filename="src\ui\projecttreectrl.h" />
+		<Unit filename="src\ui\projecttreectrlapperance.cpp" />
+		<Unit filename="src\ui\projecttreectrlapperance.h" />
+		<Unit filename="src\ui\projecttreectrldroptarget.cpp" />
+		<Unit filename="src\ui\projecttreectrldroptarget.h" />
+		<Unit filename="src\ui\projecttreeitemdata.cpp" />
+		<Unit filename="src\ui\projecttreeitemdata.h" />
+		<Unit filename="src\ui\projecttreeitemdatabase.cpp" />
+		<Unit filename="src\ui\projecttreeitemdatabase.h" />
+		<Unit filename="src\ui\projecttreeitemdataobject.cpp" />
+		<Unit filename="src\ui\projecttreeitemdataobject.h" />
+		<Unit filename="src\ui\projecttreeitemid.cpp" />
+		<Unit filename="src\ui\projecttreeitemid.h" />
+		<Unit filename="src\ui\projecttreeitemselectionmode.h" />
+		<Unit filename="src\ui\projecttreeitemtype.h" />
+		<Unit filename="src\version.cpp" />
+		<Unit filename="src\version.h" />
+		<Unit filename="src\window.cpp" />
+		<Unit filename="src\window.h" />
+		<Unit filename="src\windowdialog.cpp" />
+		<Unit filename="src\windowdialog.h" />
+		<Unit filename="src\windowdocument.cpp" />
+		<Unit filename="src\windowdocument.h" />
+		<Unit filename="src\windowlayout.cpp" />
+		<Unit filename="src\windowlayout.h" />
+		<Unit filename="src\windowlist.cpp" />
+		<Unit filename="src\windowlist.h" />
+		<Unit filename="src\windowmapping.cpp" />
+		<Unit filename="src\windowmapping.h" />
+		<Unit filename="src\windowpane.cpp" />
+		<Unit filename="src\windowpane.h" />
+		<Unit filename="src\windowtype.h" />
+		<Unit filename="src\workspace.cpp" />
+		<Unit filename="src\workspace.h" />
+		<Unit filename="src\workspacelist.cpp" />
+		<Unit filename="src\workspacelist.h" />
+		<Unit filename="src\wxincludes.h" />
+		<Unit filename="test\aboutdialog.cpp" />
+		<Unit filename="test\aboutdialog.h" />
+		<Unit filename="test\debug\auiinfopane.cpp" />
+		<Unit filename="test\debug\auiinfopane.h" />
+		<Unit filename="test\debug\debugpackage.cpp" />
+		<Unit filename="test\debug\debugpackage.h" />
+		<Unit filename="test\debug\eventdocument.cpp" />
+		<Unit filename="test\debug\eventdocument.h" />
+		<Unit filename="test\debug\textboxbuttonpanel.cpp" />
+		<Unit filename="test\debug\textboxbuttonpanel.h" />
+		<Unit filename="test\debug\toolbarpane.cpp" />
+		<Unit filename="test\debug\toolbarpane.h" />
+		<Unit filename="test\debug\unittestcases.cpp" />
+		<Unit filename="test\debug\unittestdocument.cpp" />
+		<Unit filename="test\debug\unittestdocument.h" />
+		<Unit filename="test\editor\editorpackage.cpp" />
+		<Unit filename="test\editor\editorpackage.h" />
+		<Unit filename="test\editor\scintilladocument.cpp" />
+		<Unit filename="test\editor\scintilladocument.h" />
+		<Unit filename="test\htmlpane.cpp" />
+		<Unit filename="test\htmlpane.h" />
+		<Unit filename="test\mainpackage.cpp" />
+		<Unit filename="test\mainpackage.h" />
+		<Unit filename="test\ogldocument.cpp" />
+		<Unit filename="test\ogldocument.h" />
+		<Unit filename="test\resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="test\textdocument.cpp" />
+		<Unit filename="test\textdocument.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
